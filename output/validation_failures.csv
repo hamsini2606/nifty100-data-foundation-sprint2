@@ -1,0 +1,3 @@
+Rule,Severity,Table,Message
+DQ-01,CRITICAL,companies,Duplicate values found in company_id
+DQ-06,WARNING,profitandloss,Sales should be positive
