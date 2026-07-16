@@ -1,0 +1,7 @@
+table,rows_loaded,rows_rejected,status
+companies,3,0,SUCCESS
+financial_ratios,36,1148,SUCCESS
+market_cap,18,534,SUCCESS
+peer_groups,3,53,SUCCESS
+sectors,3,89,SUCCESS
+stock_prices,180,5340,SUCCESS
