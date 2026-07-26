@@ -1,12 +1,27 @@
 import sqlite3
 
-conn = sqlite3.connect("db/nifty100.db")
+connection = sqlite3.connect("db/nifty100.db")
 
-with open("db/schema.sql", "r") as file:
-    schema = file.read()
+tables = [
+    "companies",
+    "financial_ratios",
+    "market_cap",
+    "peer_groups",
+    "sectors",
+    "stock_prices"
+]
 
-conn.executescript(schema)
-conn.commit()
-conn.close()
+for table in tables:
 
-print("Database recreated successfully")
+    print("\n" + "=" * 60)
+    print(f"TABLE: {table}")
+    print("=" * 60)
+
+    columns = connection.execute(
+        f"PRAGMA table_info({table})"
+    ).fetchall()
+
+    for column in columns:
+        print(column)
+
+connection.close()

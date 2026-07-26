@@ -27,4 +27,7 @@ fk_errors = conn.execute(
 
 print("\nForeign Key Errors:", len(fk_errors))
 
+for error in fk_errors:
+    print(f"Error in table {error[0]}: {error[1]}, {error[2]}, {error[3]}")
+
 conn.close()
